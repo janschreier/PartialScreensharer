@@ -17,6 +17,7 @@ public partial class MainWindow : Window
     private int _width;
     private int _imageLeftPos;
     private int _imageTopPos;
+    private bool _manuallySetArea;
 
     public MainWindow()
     {
@@ -50,7 +51,7 @@ public partial class MainWindow : Window
 
     private void UpdateImage()
     {
-        if (_height == null)
+        if (_manuallySetArea is false)
         {
             SetArea();
         }
@@ -66,7 +67,10 @@ public partial class MainWindow : Window
         _width = (int)(Image.ActualWidth == 0 ? Width : Image.ActualWidth);
         _imageLeftPos = (int)(Left + (Width - _width) / 2);
         _imageTopPos = (int)(Top + (Height - _height) / 2);
-        SetAreaButton.Content = $"Set Area (currently defined area: {_imageLeftPos}, {_imageTopPos}, {_width}, {_height} )";
+        if (_manuallySetArea is true)
+        {
+            SetAreaButton.Content = $"Set Area (currently defined area: {_imageLeftPos}, {_imageTopPos}, {_width}, {_height} )";
+        }
     }
 
     private static BitmapImage BitmapToImageSource(Image bitmap)
@@ -83,7 +87,11 @@ public partial class MainWindow : Window
     }
 
     private void CloseApp(object sender, RoutedEventArgs e) => Application.Current.Shutdown();
-    private void SetArea(object sender, RoutedEventArgs e) => SetArea();
+    private void SetArea(object sender, RoutedEventArgs e)
+    {
+        _manuallySetArea = true;
+        SetArea();
+    }
 
-  
+
 }
