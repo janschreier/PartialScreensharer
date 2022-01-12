@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PartialScreensharerApp"
         mc:Ignorable="d"
         Top="0"
-        WindowStyle="None"
+        WindowStyle="SingleBorderWindow"
         Left="0"
         WindowState="Normal"
         Title="PartialScreensharer App" 
@@ -15,14 +15,28 @@
     <Grid>
         <Image Name="Image" Source="StartPic.png" Stretch="Fill"/>
         <StackPanel Name="WarningText">
-            <TextBlock FontSize="22" Foreground="Red" Background="White" Margin="10" >UPDATES suspended because window is active</TextBlock>
-            <TextBlock FontSize="22" Foreground="Black" Background="White" Margin="20" TextWrapping="Wrap" >
-                Set this App Window to the area of what part of your screen you want to share. The app will make and display 
-                a screenshot of that area and this screenshot will be presented in this app which is then shown to your
-                audience in Teams, Skype or any similar program.
+            <TextBlock FontSize="22" Foreground="Red" Background="White" Margin="10" >
+                UPDATES are suspended because this window is active. Select any other window to enable 
+                screen sharing.
             </TextBlock>
-            
-            <Button FontSize="30" Content="Close App" Click="ButtonBase_OnClick" Margin="20" /> 
+            <TextBlock FontSize="22" Foreground="Black" Background="White" Margin="20" TextWrapping="Wrap" >
+                <Bold>For Microsoft Teams:</Bold>
+                Set this App Window to the area of what part of your screen you want to share.
+                The app will make and display a screenshot of that area. Simply share this app's window 
+                in Teams.
+            </TextBlock>
+            <TextBlock FontSize="22" Foreground="Black" Background="White" Margin="20" TextWrapping="Wrap" >
+                <Bold>For Skype:</Bold>
+                Skype only shows content if the window is on top and inside the desktop (you cannot partially move the 
+                window outside of your desktops visible area). In order to share an area of the screen in Skype 
+                1. Move this window to the area you want to share
+                2. Click "set area"
+                3. Move this window to an area where it is fully visible (make sure it stays visible!)
+                4. Share this app's window via Skype
+            </TextBlock>
+
+            <Button FontSize="30" Content="Close App" Click="CloseApp" Margin="20" />
+            <Button FontSize="30" Content="Set Area" Click="SetArea" Margin="20" Name="SetAreaButton"  />
 
         </StackPanel>
     </Grid>
