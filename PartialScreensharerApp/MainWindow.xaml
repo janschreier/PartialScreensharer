@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PartialScreensharerApp"
         mc:Ignorable="d"
         Top="0"
-        WindowStyle="SingleBorderWindow"
+        WindowStyle="None"
         Left="0"
         WindowState="Normal"
         Title="PartialScreensharer App" 
@@ -26,7 +26,7 @@
                 in Teams.
             </TextBlock>
             <TextBlock FontSize="22" Foreground="Black" Background="White" Margin="20" TextWrapping="Wrap" >
-                <Bold>For Skype:</Bold>
+                <Bold>For Skype (experimental):</Bold>
                 Skype only shows content if the window is on top and inside the desktop (you cannot partially move the 
                 window outside of your desktops visible area). In order to share an area of the screen in Skype 
                 1. Move this window to the area you want to share
@@ -34,9 +34,9 @@
                 3. Move this window to an area where it is fully visible (make sure it stays visible!)
                 4. Share this app's window via Skype
             </TextBlock>
-
             <Button FontSize="30" Content="Close App" Click="CloseApp" Margin="20" />
-            <Button FontSize="30" Content="Set Area" Click="SetArea" Margin="20" Name="SetAreaButton"  />
+            <Button FontSize="30" Content="Set Area (Skype, experimental!)" Click="SetAreaManually" Margin="20" Name="SetAreaButton"  />
+            <TextBlock FontSize="14" Foreground="Black" Background="White" Margin="20 0" Name="ContentSize" />
 
         </StackPanel>
     </Grid>

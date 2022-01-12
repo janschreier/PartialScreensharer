@@ -22,10 +22,13 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        
+        //set startup position of this window half screen size
         Height = SystemParameters.WorkArea.Height;
         Width = SystemParameters.WorkArea.Width / 2;
         Top = SystemParameters.WorkArea.Top;
         Left = SystemParameters.WorkArea.Left;
+        
         _originalImage = Image.Source;
         _ = RunUpdateImageTask();
     }
@@ -34,7 +37,7 @@ public partial class MainWindow : Window
     {
         while (true)
         {
-            await Task.Delay(200);
+            await Task.Delay(250);
 
             if (!IsActive)
             {
@@ -69,7 +72,7 @@ public partial class MainWindow : Window
         _imageTopPos = (int)(Top + (Height - _height) / 2);
         if (_manuallySetArea is true)
         {
-            SetAreaButton.Content = $"Set Area (currently defined area: {_imageLeftPos}, {_imageTopPos}, {_width}, {_height} )";
+            ContentSize.Text = $"Set Area (currently defined area: {_imageLeftPos}, {_imageTopPos}, {_width}, {_height} )";
         }
     }
 
@@ -87,8 +90,12 @@ public partial class MainWindow : Window
     }
 
     private void CloseApp(object sender, RoutedEventArgs e) => Application.Current.Shutdown();
-    private void SetArea(object sender, RoutedEventArgs e)
+    private void SetAreaManually(object sender, RoutedEventArgs e)
     {
+        //Skype has trouble with borderless windows
+        //Teams only shows windows with borders, when they are visible to you as well
+        //so standard WindowStyle = None and we only set it, when Skype should be used
+        WindowStyle = WindowStyle.SingleBorderWindow;
         _manuallySetArea = true;
         SetArea();
     }

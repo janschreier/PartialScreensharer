@@ -13,7 +13,7 @@ Have you whished to share only a part of the screen?
 4. Move the stuff you want to share over that window and your colleagues will see it.
 5. To stop the app, close the app, either by using the button or by rightclicking in the taskbar.
 
-## Usage with Skype:
+## Usage with Skype (experimental):
 1. Start Partial Screensharer
 2. Position to the area you want others to be able to see
 3. Click "Set Area"
@@ -23,6 +23,7 @@ the windows content)
 5. Share the App's window
 6. Move the stuff you want to share over that window and your colleagues will see it.
 7. To stop the app, close the app, either by using the button or by rightclicking in the taskbar. 
+
 
 ## Download
 For those seeking for an .exe-File I put one up on my server. [Download it here](https://janschreier.de/PartialScreensharer.zip) or compile the above sourcecode
