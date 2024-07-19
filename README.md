@@ -4,7 +4,7 @@ Have your colleagues complained not being able to see what you shared with them,
 Have you whished to share only a part of the screen? 
 
 ## Requirements
-* Build with .net 6.0.1 and thus requires .net 6.0.1 runtime
+* Build with .net 8 and thus requires the respective .net runtime
 
 ## Usage with Teams:
 1. Start Partial Screensharer
