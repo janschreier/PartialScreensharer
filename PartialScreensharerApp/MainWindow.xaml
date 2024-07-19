@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PartialScreensharerApp"
         mc:Ignorable="d"
         Top="0"
-        WindowStyle="None"
+      
         Left="0"
         WindowState="Normal"
         Title="PartialScreensharer App" 
@@ -37,7 +37,7 @@
             <Button FontSize="30" Content="Close App" Click="CloseApp" Margin="20" />
             <Button FontSize="30" Content="Set Area (Skype, experimental!)" Click="SetAreaManually" Margin="20" Name="SetAreaButton"  />
             <TextBlock FontSize="14" Foreground="Black" Background="White" Margin="20 0" Name="ContentSize" />
-
+            <CheckBox Content="Hide window border"  FontSize="25" VerticalContentAlignment="Center" Checked="HandleCheck" Unchecked="HandleUnchecked"  Name="WindowBorderCheckbox" />
         </StackPanel>
     </Grid>
 </Window>

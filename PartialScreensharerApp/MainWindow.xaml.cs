@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
@@ -100,5 +101,15 @@ public partial class MainWindow : Window
         SetArea();
     }
 
+    private void HandleCheck(object _, EventArgs e)
+    {
+        WindowStyle = WindowStyle.None;
+        WindowBorderCheckbox.Content="Show window border";
+    }
 
+    private void HandleUnchecked(object _, EventArgs e)
+    {
+        WindowStyle = WindowStyle.SingleBorderWindow;
+        WindowBorderCheckbox.Content="Hide window border";
+    }
 }
