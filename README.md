@@ -8,7 +8,7 @@ Have you whished to share only a part of the screen?
 
 ## Usage with Teams:
 1. Start Partial Screensharer
-2. Position to the area you want others to be able to see
+2. Position to the area you want others to be able to see (works nice with FancyZones from Power Toys)
 3. Share the App's window
 4. Move the stuff you want to share over that window and your colleagues will see it.
 5. To stop the app, close the app, either by using the button or by rightclicking in the taskbar.
