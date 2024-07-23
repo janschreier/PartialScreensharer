@@ -4,7 +4,7 @@
 - Have you whished to share only a part of the screen?
 - Do you have to switch the shared window several times and it always breaks your flow?
 
-Partial Screensharer solves all these problemens easily.
+Partial Screensharer solves all these problems.
 
 ## Requirements
 * Build with .net 8 and thus requires the respective .net runtime and currently only works on Windows (WPF)
