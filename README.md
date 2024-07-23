@@ -1,7 +1,10 @@
 # Partial Screensharer
 
-Have your colleagues complained not being able to see what you shared with them, because your screen is ultra-wide while theirs is smaller? 
-Have you whished to share only a part of the screen? 
+- Have your colleagues complained not being able to see what you shared with them, because your screen is ultra-wide while theirs is smaller? 
+- Have you whished to share only a part of the screen?
+- Do you have to switch the shared window several times and it always breaks your flow?
+
+Partial Screensharer solves all these problemens easily.
 
 ## Requirements
 * Build with .net 8 and thus requires the respective .net runtime
