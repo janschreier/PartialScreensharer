@@ -7,7 +7,7 @@
 Partial Screensharer solves all these problemens easily.
 
 ## Requirements
-* Build with .net 8 and thus requires the respective .net runtime
+* Build with .net 8 and thus requires the respective .net runtime and currently only works on Windows (WPF)
 
 ## Usage with Teams:
 1. Start Partial Screensharer
